@@ -6,5 +6,9 @@ public class Main
 
         System.out.println("Test");
         //updating test code to figure out github system.
+
+        Dealer.getPot();
+        Dealer.setPot(50);
+
     }
 }
