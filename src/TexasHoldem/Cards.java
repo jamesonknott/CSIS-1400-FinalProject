@@ -6,7 +6,7 @@ public class Cards
     private final Names cardName;
     private final Suits cardSuit;
 
-    private Cards(Names cardName, Suits cardSuit){
+    public Cards(Names cardName, Suits cardSuit){
         this.cardName = cardName;
         this.cardSuit = cardSuit;
 
