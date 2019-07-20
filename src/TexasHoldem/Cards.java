@@ -13,6 +13,15 @@ public class Cards
     }
 
 
+    /*
+    Enumeration list containing all card names (2 - Ace).
+
+    Each Enum Constant Includes:
+    --------------------------------------------------------------
+    int weight      :   The value the card carries in the game.
+    String symbol   :   The symbol of the card name (String because "10").
+    String text     :   A text string of the card's name.
+     */
     public enum Names
     {
         TWO(2, "2", "Two"),
@@ -23,7 +32,7 @@ public class Cards
         SEVEN(7, "7", "Seven"),
         EIGHT(8, "8", "Eight"),
         NINE(9, "9", "Nine"),
-        TEN(10, "10", "Nine"),
+        TEN(10, "10", "Ten"),
         JACK(11, "J", "Jack"),
         QUEEN(12, "Q", "Queen"),
         KING(13, "K", "King"),
@@ -40,17 +49,17 @@ public class Cards
             cardText = text;
         }
     }
+
+
+
     /*
-    Enumeration list containing all card names (2 - Ace).
+    Enumeration list containing all card suits (Hearts, Diamonds, etc).
 
     Each Enum Constant Includes:
-    --------------------------------------------------------------
-    int weight      :   The value the card carries in the game.
-    String symbol   :   The symbol of the card name (String because "10").
-    String text     :   A text string of the card's name.
+    ---------------------------------------------------------------
+    char symbol :   A unicode character code for the suit symbol.
+    String text :   A text string of the suit's name.
      */
-
-
     public enum Suits {HEARTS('\u2665', "Hearts"),
         DIAMONDS('\u2666', "Diamonds"),
         CLUBS('\u2663', "Clubs"),
@@ -64,14 +73,6 @@ public class Cards
             suitText = text;
         }
     }
-    /*
-    Enumeration list containing all card suits (Hearts, Diamonds, etc).
-
-    Each Enum Constant Includes:
-    ---------------------------------------------------------------
-    char symbol :   A unicode character code for the suit symbol.
-    String text :   A text string of the suit's name.
-     */
 
 
 
@@ -88,32 +89,6 @@ public class Cards
     {
         return String.format("| %s %c |", cardName.cardSymbol, cardSuit.suitSymbol);
     }
-
-
-
-    /*
-    Various getters.  I'm not sure they're needed anymore with the Enum Lists
-     */
-//    public String getCardNameString(){
-//        return cardName.cardText;
-//    }
-//
-//    public String getCardSuitString(){
-//        return cardSuit.suitText;
-//    }
-//
-//    public String getCardNameSymbol(){
-//        return cardName.cardSymbol;
-//    }
-//
-//    public char getCardSuitSymbol(){
-//        return cardSuit.suitSymbol;
-//    }
-//
-//    public int getCardWeight(){
-//        return cardName.cardWeight;
-//    }
-
 
 }
 
